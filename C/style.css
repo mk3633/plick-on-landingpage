@@ -1,0 +1,180 @@
+:root {
+  /* ?? 럭셔리 하이엔드 프리미엄 컬러 팔레트 */
+  --bg-main: #f9f8f4;      /* 감도 높은 따뜻한 웜 아이보리 */
+  --bg-card: #ffffff;      /* 순백색 카드로 대비감 형성 */
+  --text-primary: #1c1917; /* 부드럽고 묵직한 에스프레소 블랙 */
+  --text-secondary: #78716c;
+  --text-muted: #b7b2ac;
+  
+  --brand-burgundy: #4c1d24; /* 깊고 매혹적인 딥 버건디 (메인 강조색) */
+  --brand-gold: #c29d6d;     /* 우아한 샴페인 골드 */
+  
+  --border-line: rgba(76, 29, 36, 0.08); /* 버건디 틴트가 들어간 미세한 선 */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--bg-main); }
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* 여백 및 레이아웃 시스템 */
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.wrap-fluid { width: 100%; overflow: hidden; padding: 40px 0; }
+.section { padding: 160px 0; position: relative; }
+.text-left { text-align: left !important; }
+
+/* 미니 태그 스타일 */
+.section-tag {
+  font-size: 13px; font-weight: 700; color: var(--brand-gold);
+  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 24px;
+}
+
+/* 럭셔리 매직 알약 버튼 UI */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 16px 40px; border-radius: 999px; font-weight: 600; font-size: 16px;
+  letter-spacing: -0.01em; cursor: pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+}
+.btn-primary {
+  background: var(--brand-burgundy); color: #ffffff;
+}
+.btn-primary:hover {
+  background: #2d1014; transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(76, 29, 36, 0.2);
+}
+.btn-lg { padding: 20px 56px; font-size: 18px; }
+
+/* 상단 투명 헤더 */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(249, 248, 244, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.logo { font-weight: 900; font-size: 20px; letter-spacing: -0.04em; color: var(--brand-burgundy); }
+.nav-btn { padding: 10px 24px; font-size: 13px; }
+
+/* ===== Hero Section (은은하게 번지는 컬러 스팟) ===== */
+.hero { min-height: 95vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
+.hero-blur-1 {
+  position: absolute; top: 20%; left: 30%; width: 40vw; height: 40vw;
+  background: radial-gradient(circle, rgba(194, 157, 109, 0.1) 0%, transparent 75%); filter: blur(60px); z-index: -1;
+}
+.hero-blur-2 {
+  position: absolute; bottom: 10%; right: 25%; width: 45vw; height: 45vw;
+  background: radial-gradient(circle, rgba(76, 29, 36, 0.04) 0%, transparent 75%); filter: blur(80px); z-index: -1;
+}
+.hero-badge {
+  display: inline-block; padding: 6px 16px; border-radius: 999px;
+  background: rgba(194, 157, 109, 0.08); border: 1px solid rgba(194, 157, 109, 0.25);
+  color: var(--brand-gold); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 28px;
+}
+.hero h1 { font-size: clamp(38px, 6.5vw, 76px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.25; margin-bottom: 28px; color: var(--brand-burgundy); }
+.gradient-text { background: linear-gradient(135deg, var(--brand-burgundy) 30%, var(--brand-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { font-size: clamp(17px, 2vw, 21px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 48px; }
+.hero-sub b { color: var(--brand-burgundy); }
+
+/* ===== Problem Section (우아한 시선 집중) ===== */
+.problem-section { background: #f3f1eb; border-top: 1px solid var(--border-line); border-bottom: 1px solid var(--border-line); }
+.statement {
+  font-size: clamp(22px, 3.2vw, 36px); font-weight: 700; color: var(--text-muted);
+  line-height: 1.5; letter-spacing: -0.02em; margin-bottom: 40px; transition: color 0.4s ease;
+}
+.statement:hover { color: var(--brand-burgundy); }
+
+/* ===== Showcase Section (우아한 무한 롤링) ===== */
+.section-title { font-size: clamp(28px, 4.2vw, 44px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.3; margin-bottom: 20px; color: var(--brand-burgundy); }
+.section-desc { font-size: 16px; color: var(--text-secondary); max-width: 620px; margin-bottom: 60px; }
+
+.marquee-wrapper { width: 100%; overflow: hidden; position: relative; }
+.marquee-wrapper::before, .marquee-wrapper::after {
+  content: ""; position: absolute; top: 0; width: 140px; height: 100%; z-index: 2; pointer-events: none;
+}
+.marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg-main), transparent); }
+.marquee-wrapper::after { right: 0; background: linear-gradient(to left, var(--bg-main), transparent); }
+
+.marquee-track { display: flex; gap: 24px; width: max-content; animation: scrollMarquee 32s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.showcase-card {
+  background: var(--bg-card); border: 1px solid var(--border-line); border-radius: 20px;
+  padding: 40px 32px; width: 330px; display: flex; flex-direction: column;
+  box-shadow: 0 4px 20px rgba(76, 29, 36, 0.02); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.showcase-card:hover { border-color: var(--brand-gold); transform: translateY(-6px); box-shadow: 0 16px 32px rgba(76, 29, 36, 0.06); }
+.showcase-card .card-meta { font-size: 11px; font-weight: 700; color: var(--brand-gold); letter-spacing: 0.05em; margin-bottom: 20px; }
+.showcase-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--brand-burgundy); }
+.showcase-card p { font-size: 15px; color: var(--text-secondary); margin-bottom: 36px; }
+.card-arrow { font-size: 13px; font-weight: 600; color: var(--text-muted); transition: color 0.3s; }
+.showcase-card:hover .card-arrow { color: var(--brand-gold); }
+
+/* ===== Values Section (갤러리 아카이브 레이아웃) ===== */
+.value-section { border-top: 1px solid var(--border-line); }
+.value-list { margin-top: 60px; display: flex; flex-direction: column; }
+.value-item { display: flex; padding: 48px 0; border-bottom: 1px solid var(--border-line); align-items: flex-start; gap: 40px; }
+.value-item:first-child { border-top: 1px solid var(--border-line); }
+.value-title { display: flex; align-items: center; gap: 24px; min-width: 320px; }
+.value-title span { font-size: 14px; font-weight: 700; color: var(--brand-gold); font-family: monospace; }
+.value-title h3 { font-size: 21px; font-weight: 700; color: var(--brand-burgundy); }
+.value-text { font-size: 16px; color: var(--text-secondary); line-height: 1.7; max-width: 640px; }
+
+/* ===== Final CTA & Footer ===== */
+.cta-section { text-align: center; background: #f3f1eb; border-top: 1px solid var(--border-line); }
+footer { background: #eadecf; padding: 64px 0; font-size: 14px; color: var(--brand-burgundy); opacity: 0.9; }
+.footer-grid { display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-weight: 900; font-size: 18px; margin-bottom: 4px; }
+.footer-info { text-align: right; line-height: 1.8; color: #5a4b41; }
+
+@media (max-width: 840px) {
+  .section { padding: 100px 0; }
+  .value-item { flex-direction: column; gap: 16px; padding: 32px 0; }
+  .value-title { min-width: 100%; }
+  .footer-grid { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .footer-info { text-align: left; }
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  
+  /* 1. 카드가 위아래로 움직일 수 있는 여유 공간(Paddding)을 확보해 줍니다. */
+  padding: 20px 0; 
+  margin: -20px 0; /* 패딩 때문에 늘어난 여백을 마진으로 좁혀서 균형을 맞춰줍니다. */
+}
+
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scrollMarquee 40s linear infinite;
+  
+  /* 아까 넣었던 하드웨어 가속은 부드러운 구동을 위해 그대로 둡니다. */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ?? 기존의 단순 translateX 대신 translate3d를 사용하여 3D 가속 유도 */
+@keyframes scrollMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-33.333% - 8px), 0, 0);
+  }
+}
