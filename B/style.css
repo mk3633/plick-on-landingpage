@@ -134,6 +134,7 @@ header {
 
 /* ===== Final CTA & Footer ===== */
 .cta-section { text-align: center; background: radial-gradient(circle at top, #0f0f12 0%, var(--bg-black) 100%); border-top: 1px solid var(--border-line); }
+.cta-section .section-desc { margin: 0 auto 40px auto; text-align: center; }
 footer { background: #09090b; padding: 60px 0; font-size: 14px; color: var(--text-secondary); border-top: 1px solid var(--border-line); }
 .footer-grid { display: flex; justify-content: space-between; align-items: center; }
 .footer-logo { font-weight: 900; font-size: 18px; color: #fff; margin-bottom: 4px; }
